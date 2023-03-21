@@ -8,7 +8,9 @@ Java 개발자 과정 프로트앤드 리포지토리
     - 웹 기본구조
     - HTML 5 기본구조
 
-
+1일차 학습내용
+<!--![멀티미디어](https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/day01.png)-->
+<img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/day01.png" width="300">
 
 
 
