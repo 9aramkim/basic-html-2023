@@ -1,103 +1,118 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>핀터레스트 웹 클로닝</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- 1. Bootstrap용 css CDN 추가 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" 
-        crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="icon" href="images/pinterest.ico">
     <!-- 3. Bootsrap용 Icon CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         /* 초기화 */
-        *{
+        * {
             font-family: 'NanumGothic', 'Malgun Gothic', sans-serif;
         }
 
-        a { text-decoration: none; }
-        img { border: 0;}
-        li { list-style: none;}
-        body { background-color: snow;}
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            background-color: snow;
+        }
 
         /* 헤더영역 스타일 */
-        #main-header{
+        #main-header {
             height: 40px;
             background-color: #faf7f7;
             position: relative;
         }
 
-        .header-search-form{
+        .header-search-form {
             float: left;
             height: 26px;
             padding: 7px;
         }
 
-        .header-menu{
+        .header-menu {
             float: right;
         }
 
-        .header-title{
+        .header-title {
             position: absolute;
-            width: 200px; height: 40px;
-            left: 50%; margin-left: -100px;
+            width: 200px;
+            height: 40px;
+            left: 50%;
+            margin-left: -100px;
             background-image: url('./images/logo.png');
             background-repeat: no-repeat;
-            text-indent:-9999px;
+            text-indent: -9999px;
         }
 
         /* 풀다운 메뉴 영역 */
-        .outer-menu{
+        .outer-menu {
             float: left;
-            width: 100px; height: 20px;
+            width: 100px;
+            height: 20px;
             line-height: 20px;
             padding: 10px 0;
             position: relative;
             text-align: center;
-            font-size: small; 
+            font-size: small;
             font-weight: bold;
             z-index: 9999;
         }
 
-        .outer-menu:hover{
+        .outer-menu:hover {
             background-color: #e1dfdf;
         }
 
-        .inner-menu{
+        .inner-menu {
             display: none;
             background-color: white;
             margin-top: 10px;
             width: 100%;
             border-top: 1px solid #cccaca;
-            box-shadow: 0 2px 2px rgba(34,25,25,0.5);
+            box-shadow: 0 2px 2px rgba(34, 25, 25, 0.5);
         }
 
-        .inner-menu a{
+        .inner-menu a {
             display: block;
             padding: 5px 10px;
             z-index: 5000;
         }
 
-        .inner-menu a:hover { background-color:  #e1dfdf;}
+        .inner-menu a:hover {
+            background-color: #e1dfdf;
+        }
 
         /* 내비게이션 영역 */
-        #main-navigation{
+        #main-navigation {
             height: 30px;
             background-color: #faf7f7;
             border-top: 1px solid #cfcaca;
-            box-shadow: 1px 3px 3px rgba(34,25,25,0.5);
+            box-shadow: 1px 3px 3px rgba(34, 25, 25, 0.5);
         }
 
-        #main-navigation > ul {
+        #main-navigation>ul {
             overflow: hidden;
             text-align: center;
         }
 
-        #main-navigation > ul >li {
+        #main-navigation>ul>li {
             display: inline;
             padding: 0 5px;
             line-height: 30px;
@@ -106,29 +121,74 @@
             text-shadow: 0 1px 1px white;
         }
 
-        #main-navigation > ul > li:hover{
+        #main-navigation>ul>li:hover {
             background-color: #e1dfdf;
             border-radius: 2px;
         }
 
         /* input 영역 */
+        .form {
+
+            position: relative;
+        }
+
+        .form .fa-search {
+
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #9ca3af;
+
+        }
+
+        .form span {
+
+            position: absolute;
+            right: 17px;
+            top: 13px;
+            padding: 2px;
+            border-left: 1px solid #d1d5db;
+
+        }
+
+        .left-pan {
+            padding-left: 7px;
+        }
+
+        .left-pan i {
+
+            padding-left: 10px;
+        }
+
+        .form-input {
+            width: 250px;
+            height: 55px;
+            text-indent: 33px;
+            border-radius: 10px;
+        }
+
+        .form-input:focus {
+
+            box-shadow: none;
+            border: none;
+        }
 
         /* 카드영역 */
-        .paper{
+        .paper {
             width: 210px;
             margin: 10px 5px;
             padding: 15px 15px 0;
             font-size: smaller;
             background-color: white;
-            box-shadow: 0 1px 2px rgba(34,25,25,0.5);
+            box-shadow: 0 1px 2px rgba(34, 25, 25, 0.5);
             border-radius: 10px;
         }
 
-        .paper-description{
+        .paper-description {
             margin: 10px 0;
         }
 
-        .paper-content{
+        .paper-content {
             margin: 0 -15px;
             margin-top: 10px;
             padding: 10px 15px;
@@ -137,80 +197,95 @@
             border-radius: 0 0 10px 10px;
         }
 
-        .paper-link{
+        .paper-link {
             display: block;
             float: left;
         }
-        
-        .paper-text{
+
+        .paper-text {
             float: left;
             width: 150px;
             margin-left: 10px;
         }
 
         /* 반응형 웹 영역 */
-        #main-section{
+        #main-section {
             width: 920px;
             margin: 0 auto;
         }
+
         /* 한줄에 카드 세개 */
         @media screen and (max-width : 920px) {
-            #main-section { width: 690px;}
+            #main-section {
+                width: 690px;
+            }
         }
+
         /* 한줄에 카드 네개*/
         @media screen and (min-width : 920px) and (max-width : 1150px) {
-            #main-section { width: 920px;}
+            #main-section {
+                width: 920px;
+            }
         }
+
         /* 한줄에 카드 다섯개 */
         @media screen and (min-width : 1150px) and (max-width : 1380px) {
-            #main-section { width: 1150px;}
+            #main-section {
+                width: 1150px;
+            }
         }
+
         /* 한줄에 카드 여섯개 */
         @media screen and (min-width : 1380px) {
-            #main-section { width: 1380px;}
+            #main-section {
+                width: 1380px;
+            }
         }
 
-        #darken-background{
+        #darken-background {
             display: none;
         }
-
     </style>
 
     <!-- jquery 추가 -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <!-- Desandro libraries CDN -->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
 
             // 풀다운메뉴 이벤트
-            $('.outer-menu').hover(function(){
-                $(this).find('.inner-menu').css('display','block');
-            }, function(){
+            $('.outer-menu').hover(function () {
+                $(this).find('.inner-menu').css('display', 'block');
+            }, function () {
                 $(this).find('.inner-menu').css('display', 'none');
             });
 
             // masonry layout + imageload plugin
-            $('#main-section').imagesLoaded(function(){
+            $('#main-section').imagesLoaded(function () {
                 $('#main-section').masonry({
-                itemSelector : '.paper',
-                columnWidth: 220,
-                isAnimated : true
-            });
+                    itemSelector: '.paper',
+                    columnWidth: 220,
+                    isAnimated: true
+                });
             });
 
-            
+
         })
     </script>
 </head>
+
 <body>
     <!-- 헤더 -->
     <header id="main-header">
         <div class="header-search-form">
-            <form>
-                <input type="search" class="input-search">
+            <form class="form">
+                <i class="fa fa-search"></i>
+                <input type="text" class="form-control form-input" placeholder="Search anything...">
+                <span class="left-pan"><i class="fa fa-microphone"></i></span>
             </form>
         </div>
         <h1 class="header-title">Pingterest</h1>
@@ -278,7 +353,7 @@
                 </a>
                 <p class="paper-text">Lorem ipsum dolor sit amet.</p>
             </div>
-        </div> 
+        </div>
         <div class="paper">
             <div class="paper-holder">
                 <img width="180" src="https://picsum.photos/400/440">
@@ -290,7 +365,7 @@
                 </a>
                 <p class="paper-text">Lorem ipsum dolor sit amet.</p>
             </div>
-        </div>   
+        </div>
         <div class="paper">
             <div class="paper-holder">
                 <img width="180" src="https://picsum.photos/400/600">
@@ -302,7 +377,7 @@
                 </a>
                 <p class="paper-text">Lorem ipsum dolor sit amet.</p>
             </div>
-        </div>  
+        </div>
         <div class="paper">
             <div class="paper-holder">
                 <img width="180" src="https://picsum.photos/400/550">
@@ -314,7 +389,7 @@
                 </a>
                 <p class="paper-text">Lorem ipsum dolor sit amet.</p>
             </div>
-        </div>          
+        </div>
         <div class="paper">
             <div class="paper-holder">
                 <img width="180" src="https://picsum.photos/400/700">
@@ -338,7 +413,7 @@
                 </a>
                 <p class="paper-text">Lorem ipsum dolor sit amet.</p>
             </div>
-        </div>  
+        </div>
         <div class="paper">
             <div class="paper-holder">
                 <img width="180" src="https://picsum.photos/400/800">
@@ -350,7 +425,7 @@
                 </a>
                 <p class="paper-text">Lorem ipsum dolor sit amet.</p>
             </div>
-        </div>  
+        </div>
         <div class="paper">
             <div class="paper-holder">
                 <img width="180" src="https://picsum.photos/400/940">
@@ -362,7 +437,7 @@
                 </a>
                 <p class="paper-text">Lorem ipsum dolor sit amet.</p>
             </div>
-        </div>    
+        </div>
         <div class="paper">
             <div class="paper-holder">
                 <img width="180" src="https://picsum.photos/400/640">
@@ -374,7 +449,7 @@
                 </a>
                 <p class="paper-text">Lorem ipsum dolor sit amet.</p>
             </div>
-        </div>  
+        </div>
         <div class="paper">
             <div class="paper-holder">
                 <img width="180" src="https://picsum.photos/400/720">
@@ -386,7 +461,7 @@
                 </a>
                 <p class="paper-text">Lorem ipsum dolor sit amet.</p>
             </div>
-        </div>  
+        </div>
         <div class="paper">
             <div class="paper-holder">
                 <img width="180" src="https://picsum.photos/400/740">
@@ -398,7 +473,7 @@
                 </a>
                 <p class="paper-text">Lorem ipsum dolor sit amet.</p>
             </div>
-        </div>  
+        </div>
         <div class="paper">
             <div class="paper-holder">
                 <img width="180" src="https://picsum.photos/400/990">
@@ -410,7 +485,7 @@
                 </a>
                 <p class="paper-text">Lorem ipsum dolor sit amet.</p>
             </div>
-        </div>  
+        </div>
 
     </section>
 
@@ -430,11 +505,11 @@
             <img src="https://via.placeholder.com/600x750">
         </div>
     </div>
-   
+
     <!-- 2. Bootstrap용 js는 body에 위치해야 함! -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
-            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" 
-            crossorigin="anonymous">
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+        </script>
 </body>
+
 </html>
