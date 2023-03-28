@@ -27,7 +27,7 @@ Java 개발자 과정 프로트앤드 리포지토리
 3일차 레이아웃
 <img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/grid_layout.png" width="300">
 
-# 4일차
+## 4일차
 - 프론트엔드 학습
     - Grid 레이아웃
     - 반응형 웹
@@ -37,16 +37,21 @@ Java 개발자 과정 프로트앤드 리포지토리
 4일차 그리드레이아웃 포토갤러리
 <img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/gallery02.png">
 
-# 5일차
+## 5일차
 - 프론트엔드 학습
     - js/jQuery 연동
     - Bootstrap 학습
     - Bootstrap Album example 클로닝
 
-# 6일차
+## 6일차
 - 프론트엔드 학습
     - Bootstrap Album example 마무리
-    <img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/album_theme.png">
+    - 핀터레스트 스타일 웹페이지 클로닝
 
-    - 포트폴리오 웹사이트 만들기
-    
+6일차 Bootstrap 앨범 클로닝
+<img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/album_theme.png">
+
+## 7일차
+- 프론트엔드 학습
+    - 
+
