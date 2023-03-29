@@ -35,7 +35,7 @@ Java 개발자 과정 프로트앤드 리포지토리
     - jQuery
 
 4일차 그리드레이아웃 포토갤러리
-<img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/gallery02.png">
+<img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/gallery02.png" width="700">
 
 ## 5일차
 - 프론트엔드 학습
@@ -49,7 +49,7 @@ Java 개발자 과정 프로트앤드 리포지토리
     - 핀터레스트 스타일 웹페이지 클로닝
 
 6일차 Bootstrap 앨범 클로닝
-<img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/album_theme.png">
+<img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/album_theme.png" width="700">
 
 ## 7일차
 - 프론트엔드 학습
@@ -59,7 +59,9 @@ Java 개발자 과정 프로트앤드 리포지토리
         - Masonry layout Library
         - ImageLoaded Library
         - Lightbox 구현
+    - Parallax Scrolling Web
 
 7일차 핀터레스트 스타일 클로닝
-<img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/portpolio1.png">
-
+<img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/portpolio1.png" width="700">
+Parallax Scrolling Web
+<img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/portpolio2.png" width="700">
