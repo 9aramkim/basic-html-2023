@@ -53,5 +53,8 @@ Java 개발자 과정 프로트앤드 리포지토리
 
 ## 7일차
 - 프론트엔드 학습
-    - 
+    - 핀터레스트 스타일 웹페이지 마무리
+
+7일차 핀터레스트 스타일 클로닝
+<img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/portpolio1.png">
 
