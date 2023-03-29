@@ -10,7 +10,7 @@ $(window).scroll(function(){
         'top': value * -0.4 + 'px',
         'left' : value * 1.2 + 'px'
     });
-    $('#hill2').css('top', value * 0.2 + 'px' );
+    $('#hill1').css('top', value * 0.2 + 'px' );
     $('#hill2').css('top', value * 0.2 + 'px' );
     $('#hill3').css('top', value * 0.2 + 'px' );
     $('#hill4').css({
