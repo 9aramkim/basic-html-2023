@@ -15,6 +15,26 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src='script/parallax.js'></script>
+    <script>
+        $(document).ready(function(){
+            var image = document.getElementById('hill1');
+            $('.contents').css({
+                'position':'absolute',
+                'top' : image.height + 'px'
+            });
+        });
+
+        // 브라우저 사이즈 바뀔때마다
+        $(window).resize(function(){
+            var image = document.getElementById('hill1');
+            console.log(`${image.width} x ${image.height}`);
+
+            $('.contents').css({
+                'position' : 'absolute',
+                'top' : image.height + 'px'
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -47,7 +67,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos impedit cumque sunt odit temporibus assumenda numquam atque vero enim amet quod quos, nisi nam quasi? Rerum perferendis earum ex quasi ipsum fugiat aut quibusdam nulla corporis perspiciatis fuga quo doloremque, sit optio reprehenderit itaque ut sequi repudiandae iure nihil quos aliquid. Accusamus qui provident perspiciatis nam ipsam? Corporis, voluptatem? Nihil soluta vitae nisi assumenda voluptate delectus autem placeat eius. Labore, ipsam soluta? Ut asperiores minus fugit est quod rerum animi unde consequatur illo nemo! Aliquam, repellendus quibusdam ipsum quia necessitatibus unde sequi dolore ducimus minima incidunt ut nobis dolor officiis.</p>
     </section>
 
-    <footer>
+    <!-- <footer>
         <nav>
             <a href="#">Blog</a>
             <span> | </span>
@@ -59,7 +79,7 @@
             <span>email : rlarkfka0113@gmail.com</span><br>
             <span>Copyright &copy; 2022. Codehal. All Rights Reserved.</span>
         </p>
-    </footer>
+    </footer> -->
 
     <!-- 2. Bootstrap용 js는 body에 위치해야 함! -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
