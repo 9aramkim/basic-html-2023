@@ -71,5 +71,8 @@ Parallax Scrolling Web
 
 ## 8일차
 - 프론트엔드 학습
-    - Single Page Templete 
+    - Single Page Template 
     - SB Admin Page
+
+Grayscale Single Page Template
+<img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/portpolio3.gif" width="700">

@@ -8,6 +8,18 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+html{
+    scroll-padding-top: calc(4.5rem - 1px);
+}
+
+body{
+    letter-spacing: 0.063em;
+}
+
+a{
+    color: #64a19d;
+}
+
 hr{
     margin: 1rem 0;
     color: inherit;
@@ -138,5 +150,162 @@ img{
 
 .custom-color{
     color: #64a19d;
+}
+
+.portfolios-section{
+    padding: 10rem 0;
+}
+
+.portfolios-section .featured-text{
+    padding: 2rem;
+}
+
+.portfolios-section .portfolio-text{
+    padding: 3rem;
+    font-size: 90%;
+}
+
+@media screen and (min-width: 992px){
+    .portfolios-section .featured-text{
+        padding: 0 0 0 2rem;
+        border-left: 0.5rem solid #64a19d;
+    }
+    .portfolios-section .portfolio-text{
+        padding: 5rem;
+    }
+}
+
+.about-section{
+    padding-top: 10rem;
+    background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.9) 75%, rgba(0,0,0,0.8) 100%);
+}
+
+.about-section p{
+    margin-bottom: 5rem;
+}
+
+.masterHead{
+    position: relative;
+    width: 100vw;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3)0%, rgba(0,0,0,0.7)75%, #000 100%),
+    url('../images/bg-masthead.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.masterHead h1{
+    font-size: 5rem;
+    line-height: 5rem;
+    letter-spacing: 0.8rem;
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* text-shadow: 2px 2px 2px rgba(0,0,0,0.4); */
+}
+
+.masterHead h2{
+    max-width: 20rem;
+    font-size: 1rem;
+}
+
+#mainNav {
+    min-height: 3.5rem;
+    background-color: #fff;
+}
+
+#mainNav nav-toggler {
+    font-size: 80%;
+    padding: 0.75rem;
+    color: #64a19d;
+    border: 1px solid #64a19d;
+}
+
+#mainNav .navbar-toggler:focus {
+    outline: none;
+}
+
+#mainNav .navbar-brand { 
+    color: #000;
+    font-weight: 900;
+    padding: 0.9rem 0;
+}
+
+#mainNav .navbar-nav .nav-item:hover {
+    color: fade(#fff, 80%);
+    outline: none;
+    background-color: transparent;
+}
+
+#mainNav .navbar-nav .nav-item:active,
+#mainNav .navbar-nav .nav-item:focus {
+    outline: none;
+    background-color: transparent;
+}
+
+@media screen and (min-width : 992px){
+    #mainNav {
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+        background-color: transparent;
+        transition: background-color 0.3s ease-in-out;        
+    }
+
+    #mainNav .navbar-brand { 
+        color: rgba( 255, 255, 255, 0.5);
+        padding: 0.5rem 0;
+    }
+
+    #mainNav .navbar-link {
+    transition: none;
+    padding: 2rem 1.5rem;
+    color: rgba( 255, 255, 255, 0.5);
+    }
+
+    #mainNav .navbar-link:hover {
+        color: rgba( 255, 255, 255, 0.8);
+    }
+    
+    #mainNav .navbar-link:active {
+        color: white
+    }
+
+    /* 메뉴 동적으로 변경하는 부분 - js가 처리하는 부분 시작*/
+    /* 없는 클래스를 만드는 것이기 때문에 #mainNv.navbar-shrink 사이에 공백이 있으면 절대 안됨!*/
+    #mainNav.navbar-shrink{
+        background-color: white;
+    }
+
+    #mainNav.navbar-shrink .navbar-brand{
+        color: #000;
+    }
+
+    #mainNav.navbar-shrink.nav-link{
+        color: #000;
+        padding: 1.5rem 1.5rem 1.25rem;
+        border-bottom: 0.25rem solid transparent;
+    }
+
+    #mainNav.navbar-shrink .nav-link:hover{
+        color: #64a19d;
+    }
+
+    #mainNav.navbar-shrink .nav-link:active{
+        color: #467370;
+    }
+
+    #mainNav.navbar-shrink .nav-link.active:active{
+        color: #64a19d;
+        outline: none;
+        border-bottom: 0.25rem solid #64a19d;
+    }
+
+    /* js에서 처리하는 메뉴부분 끝*/
 }
 

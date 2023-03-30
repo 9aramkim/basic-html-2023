@@ -22,6 +22,41 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" 
         integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src='script/singlepage.js'></script>
+    <script>
+        $(document).ready(function(){
+            // 화면을 스크롤 다운하면
+            // 메뉴바가 색상이 흰색으로 변경
+            var navbarShrink = () => {
+                const mainNav = $('#mainNav');
+                if(!mainNav){
+                    return;
+                }
+
+                if(window.scrollY === 0)
+                    mainNav.removeClass('navbar-shrink');
+                else
+                    mainNav.addClass('navbar-shrink');
+            }
+
+            navbarShrink();
+            $(document).scroll(function(){
+                navbarShrink();
+            });
+
+        // 실패, 동작안함 
+        //     const navbarToggler=$('.navbar-toggler');
+        //     const resNavItems = [].slice.call(
+        //         document.querySelectorAll('#navbarResponsive .nav-link')
+        //     );
+        //     resNavItems.map(function(resNavItem) {
+        //         resNavItem.addEventListener('click', () => {
+        //             if(window.getComputedStyle(navbarToggler).display !== 'none'){
+        //                 navbarToggler.click();
+        //             }
+        //         })
+        //     });
+        });
+    </script>
 </head>
 
 <body id="page-top">
@@ -37,7 +72,7 @@
             </button>
             <div id="navbarResponsive" class="navbar-collapse">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link" active>About</a></li>
                     <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
                     <li class="nav-item"><a href="#signup" class="nav-link">Contact</a></li>
                 </ul>
@@ -49,7 +84,7 @@
         <div class="container px-4 d-flex h-100 justify-content-center align-items-center">
             <div class="d-flex justify-content-center">
                 <div class="text-center">
-                    <h1 class="mx-auto my-0 text-uppercase">Grayscale Website</h1>
+                    <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
                     <h2 class="text-white-50 mx-auto mt-2 mb-5">responsive single page Bootstrap site</h2>
                     <a href="#" class="btn btn-primary shadow-sm">Get started</a>
                 </div>
@@ -75,20 +110,21 @@
     <!-- Portfolio 영역 -->
     <section id="portfolio" class="portfolios-section bg-light">
         <div class="container px-4">
-            <!-- 1st row 영역 -->
-            <div class="row align-items-center">
+            <!-- Featured 1st row 영역-->
+            <div class="row align-items-center gx-0 mb-4">
                 <div class="col-8">
                     <img src="images/bg-masthead.jpg" class="img-fluid mb-3">
                 </div>
                 <div class="col-4">
                     <div class="featured-text text-center">
                         <h4>Shoreline</h4>
-                        <p>Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+                        <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even
+                            commercial projects! Download it, customize it, and publish your website!</p>
                     </div>
                 </div>
             </div>
             <!-- 2nd row 영역 -->
-            <div class="row justify-content-center">
+            <div class="row justify-content-center gx-0">
                 <div class="col-6">
                     <img src="images/demo-image-01.jpg" class="img-fluid">
                 </div>
@@ -104,7 +140,7 @@
                 </div>
             </div>
             <!-- 3rd row 영역 -->
-            <div class="row justify-content-center">
+            <div class="row justify-content-center gx-0">
                 <div class="col-6">
                     <img src="images/demo-image-02.jpg" class="img-fluid">
                 </div>
@@ -126,9 +162,9 @@
     <!-- contact / signup 영역 -->
     <section id="signup" class="signup-section">
         <div class="container px-4">
-            <div class="row">
+            <div class="row px-4">
                 <div class="col-10 mx-auto text-center">
-                    <i class="far fa-paper-plane fa-2x"></i>
+                    <i class="far fa-paper-plane fa-2x text-white"></i>
                     <h2 class="text-white mb-5">Subscribe!!</h2>
                     <form id="contactForm" class="form-signup">
                         <div class="row input-group-newletter">
