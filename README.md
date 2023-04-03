@@ -52,7 +52,7 @@ Java 개발자 과정 프로트앤드 리포지토리
 <img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/album_theme.png" width="700">
 
 ## 7일차
-- 프론트엔드 학습
+- 프론트엔드 실습
     - 핀터레스트 스타일 웹페이지 마무리
         - Bootstrap 5.3.0
         - jQuery 3.6.4
@@ -70,17 +70,28 @@ Parallax Scrolling Web
 <img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/portpolio2.png" width="700">
 
 ## 8일차
-- 프론트엔드 학습
+- 프론트엔드 실습
     - Single Page Template 
     - SB Admin Page
 
 Grayscale Single Page Template
 <img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/portpolio3.gif" width="700">
 
-## 9d일차
-- 프론트엔드 학습
+## 9일차
+- 프론트엔드 실습
     - SB Admin Page
         - Bootstrap
         - Chart.js
 
 SB Admin 중간단계
+
+## 10일차
+- 프론트엔드 실습
+    - SB Admin Page 마무리
+    - 
+
+## 11일차
+-  프론트엔드 실습
+
+## 12일차
+- 프론트엔드 실습
