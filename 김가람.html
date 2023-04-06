@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>김가람페이지</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!--1. BootStrap용 CSS CDN 추가-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!--jQuery 추가-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#home').click(function(){
+                alert('홈 메뉴!');
+            });
+            $('#about').click(function(){
+                alert('About Me 메뉴!');
+            });
+            $('#portfolio').click(function(){
+                alert('Portfolio 메뉴!');
+            });
+            $('#contact').click(function(){
+                alert('Contact 메뉴!');
+            });
+        });
+    </script>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+#container{
+    margin: 0 auto;
+    width: 1200px;
+    /* border: 1px solid #292929; */
+}
+
+header{
+    width: 1200px;
+    height: 200px;
+    /* background-color: rgb(99, 107, 107); */
+}
+
+#top > h1 {
+    /* margin-top: 50px; */
+    font-size: 60px;
+    color: gold;
+    font-weight: 800;
+    margin-left: 10px;
+    padding-top: 60px;
+}
+
+#top{
+    width: 1200px;
+    height: 150px;
+    background-color: grey;
+}
+
+#nav{
+    width: 1200px;
+    height: 50px;
+    background-color: gold;
+    padding-top: 10px;
+}
+
+#nav > a {
+    /* margin-top: 15px; */
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    text-align : center;
+    /* padding-top: 10px; */
+}
+
+#nav > a:hover,
+#nav > a:active{
+    color: blue;
+    text-decoration: underline;
+}
+
+#home {
+    margin-left: 20px;
+}
+
+#contents{
+    width: 1200px;
+    height: 150px;
+}
+
+#layoutLeftSide{
+    float: left;
+    width: 1000px;
+    height: 150px;
+    background-color: #292929;
+}
+
+#layoutLeftSide > h3{
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    padding-top: 60px;
+    padding-left: 15px;
+}
+
+#layoutLeftSide > p {
+    font-size: medium;
+    color: whitesmoke;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-left: 15px;
+}   
+
+#layoutBanner{
+    float: right;
+    width: 200px;
+    height: 150px;
+    background-color: grey;
+}
+
+#layoutBanner > p {
+    font-size: small;
+    color: whitesmoke;
+    padding-left: 15px;
+    padding-top: 40px;
+}
+
+#footer{
+    /* padding: 1rem; */
+    width: 1200px;
+    height: 50px;
+    background-color: gold;
+    text-align : center; 
+}
+
+#company{
+    padding-top: 13px;
+}
+
+    </style>
+
+</head>
+<body>
+   
+    <div class="position-absolute top-50 start-50 translate-middle" id="container">
+        <header>
+            <div>
+                <div id="top">
+                    <h1>한글 Page</h1>
+                </div>
+
+                <nav id="nav">
+                    <a id="home" href="#">Home</a>
+                    <a id="about" href="#">About Me</a>
+                    <a id="portfolio" href="#">Portfolio</a>
+                    <a id="contact" href="#">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <div id="contents">
+            <article id="layoutLeftSide">
+                <h3>섹션1</h3>
+                <p>섹션내용입니다.</p>
+            </article>
+            <aside id="layoutBanner">
+                <p>배너영역</p>
+            </aside>
+
+        </div>
+    
+    
+        <footer id="footer">
+            <div id="company">&copy; 2023.김가람.inc reserved</div>
+        </footer>
+
+    </div>
+
+    <!-- Bootstrap용 js는 body에 위치(필수) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous">
+    </script>
+
+</body>
+</html>

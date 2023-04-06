@@ -93,6 +93,8 @@ SB Admin Page 마무리
 
 ## 11일차
 -  프론트엔드 실습
+    - Dream Jeju Page
+    <img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/portfolio5.png" width="700">
 
 ## 12일차
 - 프론트엔드 실습
