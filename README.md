@@ -97,4 +97,6 @@ SB Admin Page 마무리
     <img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/portfolio5.png" width="700">
 
 ## 12일차
-- 프론트엔드 실습
+- 프론트엔드 쪽지시험
+    - 한글 page 
+    <img src="https://raw.githubusercontent.com/9aramkim/basic-html-2023/main/image/portfolio6.png" width="700">
